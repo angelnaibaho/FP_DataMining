@@ -5,10 +5,10 @@ from visulise2 import visualize
 from wordclouds import wordClouds
 
 # Load model dan vectorizer
-with open(r'D:\Data Mining\multinominalNB_model.pkl', 'rb') as model_file:
+with open(r'multinominalNB_model.pkl', 'rb') as model_file:
     classifier = pickle.load(model_file)
 
-with open(r'D:\Data Mining\vectorizer.pkl', 'rb') as vectorizer_file:
+with open(r'vectorizer.pkl', 'rb') as vectorizer_file:
     tfidf = pickle.load(vectorizer_file)
 
 with st.sidebar:
