@@ -12,7 +12,7 @@ with open(r'vectorizer.pkl', 'rb') as vectorizer_file:
 
 with st.sidebar:
     selected = option_menu("Kelompok 12", ["Prediksi", "Visualisasi"], 
-        icons=["speedometer", "graph-up"], menu_icon="cast")
+        icons=["speedometer", "graph-up"], menu_icon="cast", default_index=0)
     selected
 
 # Fungsi prediksi
