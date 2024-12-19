@@ -42,6 +42,7 @@ def main():
 
         
     elif selected == 'Visualisasi':
+        st.title("Visualisasi Data Komentar Toxic dan Non-Toxic")
         visualize()
     
 if __name__ == '__main__':
