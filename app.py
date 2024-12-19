@@ -59,10 +59,6 @@ def main():
         category = st.selectbox("Pilih Kategori Prediksi", ["Word Clouds", "Grafik"])
         st.title("Visualisasi Data Komentar Toxic dan Non-Toxic")
 
-        if category == "Word Clouds":
-            # Panggil fungsi visualisasi dari visual.py
-            wordClouds()
-
         if category == "Grafik":
             # Panggil fungsi visualisasi dari visual.py
             visualize()
