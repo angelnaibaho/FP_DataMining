@@ -24,35 +24,22 @@ def prediction(kalimat):
 
 # Fungsi utama aplikasi Streamlit
 def main():
-    if selected == 'Prediksi':
-        # Dropdown untuk memilih kategori
-        category = st.selectbox("Pilih Kategori Prediksi", ["Kalimat", "Input Data"])
-        
-        if category == "Kalimat":
-            # Judul aplikasi
-            st.title('Prediksi Kalimat Toxic')
-
-            # Input teks dari pengguna
-            kalimat = st.text_input("Masukkan komentar yang ingin diprediksi", "")
-
-            result = ""
-            if st.button("Prediksi"):
-                result = prediction(kalimat)
-                st.success('Hasil Prediksi: {}'.format(result))
-                if result == 'Toxic':  # Jika prediksi toxic
-                    st.warning("-- Toxicity doesn't build, it destroys. Let's be kind!🙌🏻 ---")
-                elif result == 'Non-Toxic':  # Jika prediksi non-toxic
-                    st.success("--- Let’s lift each other up, not tear each other down!🫶🏻 ---")
-        
-        elif category == "Input Data":
-            st.title("Input Data")
-            uploaded_files = st.file_uploader(
-            "Choose a CSV file", accept_multiple_files=True)
-            for uploaded_file in uploaded_files:
-                bytes_data = uploaded_file.read()
-                st.write("filename:", uploaded_file.name)
-                st.write(bytes_data)
+    if selected == 'Prediksi'
+       # Judul aplikasi
+       st.title('Prediksi Kalimat Toxic')
+   
+       # Input teks dari pengguna
+       kalimat = st.text_input("Masukkan komentar yang ingin diprediksi", "")
     
+        result = ""
+        if st.button("Prediksi"):
+            result = prediction(kalimat)
+            st.success('Hasil Prediksi: {}'.format(result))
+            if result == 'Toxic':  # Jika prediksi toxic
+                st.warning("-- Toxicity doesn't build, it destroys. Let's be kind!🙌🏻 ---")
+            elif result == 'Non-Toxic':  # Jika prediksi non-toxic
+                st.success("--- Let’s lift each other up, not tear each other down!🫶🏻 ---")
+        
     elif selected == 'Visualisasi':
         category = st.selectbox("Pilih Kategori Prediksi", ["Word Clouds", "Grafik"])
         st.title("Visualisasi Data Komentar Toxic dan Non-Toxic")
