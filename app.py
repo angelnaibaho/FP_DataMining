@@ -11,7 +11,7 @@ with open(r'vectorizer.pkl', 'rb') as vectorizer_file:
 
 with st.sidebar:
     selected = option_menu("Kelompok 12", ["Prediksi", "Visualisasi"], 
-        icons=['house', 'gear'], menu_icon="cast")
+        icons=["speedometer", "graph-up"], menu_icon="cast")
     selected
 
 # Fungsi prediksi
