@@ -4,7 +4,7 @@ import plotly.express as px
 
 def visualize():
     # Membaca file CSV
-    df = pd.read_csv('D:/Data Mining/Youtube Scrapping.csv')
+    df = pd.read_csv('Youtube Scrapping.csv')
 
     # Memastikan kolom 'publishedAt' adalah datetime
     df['publishedAt'] = pd.to_datetime(df['publishedAt'])
