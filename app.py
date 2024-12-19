@@ -1,7 +1,7 @@
 import pickle
 import streamlit as st
 from streamlit_option_menu import option_menu
-from visulise2 import visualize  
+ 
 # Load model dan vectorizer
 with open(r'multinominalNB_model.pkl', 'rb') as model_file:
     classifier = pickle.load(model_file)
